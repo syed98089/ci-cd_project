@@ -30,8 +30,7 @@ pipeline {
         stage('Docker Build and Tag') {
            steps {
               
-                sh 'docker build -t samplewebapp:latest .' 
-       sh 'docker tag samplewebapp my_ecr_repo/samplewebapp:latest'                       
+             docker build -t my_ecr_repo .                      
           }
         }
     
