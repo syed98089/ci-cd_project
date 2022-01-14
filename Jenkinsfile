@@ -30,7 +30,7 @@ pipeline {
         stage('Docker Build and Tag') {
            steps {
               
-             docker build -t my_ecr_repo .                      
+             dockerImage = docker.build "my_ecr_repo:latest"            
           }
         }
     
