@@ -43,14 +43,6 @@ pipeline {
                  
             }
         }
-   // Building Docker images
-    stage('Building image') {
-      steps{
-        script {
-          dockerImage = docker build -t my_ecr_repo .
-        }
-      }
-    }
 
 // Uploading Docker images into AWS ECR
     stage('Pushing to ECR') {
