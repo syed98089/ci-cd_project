@@ -31,7 +31,7 @@ pipeline {
            steps {
               
                 sh 'docker build -t samplewebapp:latest .' 
-       sh 'docker tag samplewebapp syedkamil/samplewebapp:latest'                       
+       sh 'docker tag samplewebapp my_ecr_repo/samplewebapp:latest'                       
           }
         }
     
