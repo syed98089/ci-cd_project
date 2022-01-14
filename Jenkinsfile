@@ -19,7 +19,18 @@ pipeline {
                 sh 'mvn package'             
           }
         }
+         
+        stage('Docker Build and Tag') {
+           steps {
+              
+                sh 'docker build -t samplewebapp:latest .' 
+                sh 'docker tag samplewebapp syedkamil/samplewebapp:latest'
+                //sh 'docker tag samplewebapp syed/samplewebapp:$BUILD_NUMBER'
+               
+          }
+        }
     
+
     }
 	}
     
